@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(253, 222, 227);
+}
+/* nav bar */
+nav {
+    width:100%;
+  background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    transform: translatex(-50%);
+    left: 50%;
+    z-index: 1;
+    box-shadow: 0px 3px 5px grey;
+}
+
+.nav-content {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    padding-top: 5px;
+
+}
+
+.logo {
+    color:crimson
+
+}
+
+
+
+.nav-content a {
+    position: relative;
+    text-decoration: none;
+    color:black;
+}
+
+
+
+
+.nav-content a::after {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    background-color:pink;
+    transition: all 2s;
+    z-index: -1;
+}
+
+
+
+input:checked~.nav-content {
+    left: 0px
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+.nav-content a:hover::after
+ {
+    width: 100%;
+}
+
+
+.contact-page{
+    min-height:140vh;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 20px 20px;
+    gap:30px;
+   
+}
+
+.contact-page h2::first-letter {
+    content: "";
+    color:red;
+    font-size: 45px;
+
+   }
+.contact-page h2{
+    animation-name: contact;
+    animation-duration: 3s;
+    position: relative;  
+}
+
+@keyframes contact {
+    from{
+        top:-30%
+    }
+    to{
+        top:0
+    }
+}
+
+.content{
+
+    display: flex;
+    gap:30px;
+    padding:10px 40px 0px 40px;
+}
+
+
+.conone{
+    width:50%;
+    height:350px;
+
+}
+
+.conone{
+    animation-name: map;
+    position:relative;
+    animation-duration: 2s;
+    
+}
+
+@keyframes map{
+    from{
+        left:-100%
+    }
+    to{
+        left:0%
+    }
+}
+
+
+
+form{
+    width:50%;
+    height:350px;
+ 
+    color:white;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    
+}
+
+form{
+    animation-name: form;
+    position:relative;
+    animation-duration: 2s;
+}
+
+@keyframes form{
+    from{
+        right:-100%
+    }
+    to{
+        right:0%
+    }
+}
+
+form .first,.last{display: block;}
+
+.first{color:red}
+
+
+form input{
+    width:100%;
+    padding:6px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+textarea{width:100%;
+    padding:10px;
+    height:100px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    resize: none;
+}
+
+form button{
+    width:30%;
+    background-color: crimson;
+    color:white;
+    border-radius: 5px;
+    border:none;
+    padding:6px;
+
+
+}
+
+footer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color:pink; */
+    height:210px;
+   
+}
+
+.box h3{
+    color:red
+}
+
+.box p:hover{
+    text-decoration: underline;
+}
+
+.box{
+    width:250px;
+  
+    /* background-color:blanchedalmond ; */
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    animation-name: footer;
+    position:relative;
+    animation-duration: 1s;
+}
+
+@keyframes footer{
+    from{
+        bottom:-100%
+    }
+    to{
+        bottom:0%
+    }
+}
+
+.ice{
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query */
+
+/* mobile screen */
+@media only screen and (max-width:600px) {
+    .nav-content {
+        background-color:#800020;
+        position: fixed;
+        top: 47px;
+        width: 100%;
+        left: 120%;
+        flex-direction: column;
+        height: 40vh;
+        align-items:left;
+
+    }
+
+    .nav-content a {
+        color: white;
+    }
+
+
+
+    .nav-content button {
+        padding: 15px;
+    }
+
+    label {
+        display: block;
+        padding-top:6px;
+        font-size:20px;
+
+    }
+
+    .contact-page{
+    
+        width:100%;
+     
+       
+    }
+
+    .content{
+      
+        flex-direction: column;
+       padding:0px
+        
+    }
+    .conone{width:100%}
+
+    
+
+    form{width:100%;
+  }
+
+    form button{width:100%}
+
+    .map{width:200%}
+
+    footer{
+        flex-direction: column;
+    }
+
+    .box{width:100%}
+
+
+
+ 
+
+}
+
+
+
+/* tablet screen */
+@media only screen and (min-width:600px) and (max-width:900px) {
+
+    label {
+        display: none;
+    }
+
+  
+
+}
